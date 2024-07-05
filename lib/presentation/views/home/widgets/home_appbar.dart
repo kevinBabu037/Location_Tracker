@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:location_tracker/data/shared_pref/shared_pref.dart';
-import 'package:location_tracker/presentation/views/authentication/login/screen_login.dart';
 import 'package:location_tracker/presentation/views/home/cubit/theme_cubit.dart';
-import 'package:location_tracker/presentation/core/functions_navigations.dart';
+
 
 class HomeAppbarWidget extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-
-  const HomeAppbarWidget({
+ 
+  const HomeAppbarWidget({ 
     super.key,
     required this.title,
   });
@@ -30,20 +28,7 @@ class HomeAppbarWidget extends StatelessWidget implements PreferredSizeWidget {
             );
           },
         ),
-        IconButton(
-          onPressed: () {
-           kShowDialog(
-            context: context, title: 'Log Out', 
-            contentTxt: 'Are you sure want to logout?', 
-            actionBtn1Txt: 'Cancel', 
-            actionBtn2Txt: 'Logout', 
-            onPressed: (){
-               SharedPreferenses.deleteBool();
-            kNavigationPushRemoveUntil(context, ScreenLogIn());
-            });
-          },
-          icon: const Icon(Icons.logout_rounded),
-        ),
+      
       ],
     );
   }
@@ -51,3 +36,8 @@ class HomeAppbarWidget extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
+
+
+
+
+

@@ -19,7 +19,10 @@ class LocationDetailWidget extends StatelessWidget {
            kHeight20,
            Text("Latitude: $latitude",style:const TextStyle(fontSize: 20 ),),
            kHeight10,
-           Text("Longitude: $longitude",style:const TextStyle(fontSize: 20 )) 
+           Text("Longitude: $longitude",style:const TextStyle(fontSize: 20 )),
+           const Divider(endIndent: 40,indent: 40 ,),
+           kHeight10,
+          const Text("Track your location in every 30 minutes")
          ],
        ),
      );

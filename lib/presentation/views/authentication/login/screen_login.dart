@@ -92,8 +92,6 @@ class ScreenLogIn extends StatelessWidget {
              
                      kHeight20,
 
-
-            
                   Align(child: GestureDetector(  
                     onTap: () {
                        kNavigationPushReplacement(context, ScreenSignup());

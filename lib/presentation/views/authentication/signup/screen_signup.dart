@@ -45,7 +45,6 @@ class ScreenSignup extends StatelessWidget {
               
                ////section2
                  
-               
                  kHeight30, 
                   
                   const Text('Name',style:TextStyle(color:kClrGrey),),  

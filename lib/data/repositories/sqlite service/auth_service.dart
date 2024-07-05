@@ -24,7 +24,7 @@ class SqfliteService {
 
     _db = await openDatabase(
       join(await getDatabasesPath(), 'user.db'),
-      version: 2, // Updated version to trigger onUpgrade
+      version: 2, 
       onCreate: (Database db, int version) async {
         await db.execute(
           "CREATE TABLE user (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, name TEXT, password TEXT)",
@@ -135,7 +135,24 @@ class SqfliteService {
   });
  }
 
+Future<Map<String, String>> getUserEmailAndName(int id) async {
+    final db = await _getDb();
+    final List<Map<String, dynamic>> maps = await db.query(
+      'user',
+      columns: ['email', 'name'],
+      where: 'id = ?',
+      whereArgs: [id],
+    );
 
+    if (maps.isNotEmpty) {
+      return {
+        'email': maps.first['email'] as String,
+        'name': maps.first['name'] as String,
+      };
+    } else {
+      throw Exception('User not found');
+    }
+  }
 
 
 

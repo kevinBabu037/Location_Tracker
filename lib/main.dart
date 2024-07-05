@@ -8,7 +8,8 @@ import 'package:location_tracker/presentation/views/admin/bloc/user%20location%2
 import 'package:location_tracker/presentation/views/authentication/login/bloc/bloc/login_bloc.dart';
 import 'package:location_tracker/presentation/views/authentication/login/screen_login.dart';
 import 'package:location_tracker/presentation/views/authentication/signup/bloc/bloc/sign_up_bloc.dart';
-import 'package:location_tracker/presentation/views/home/bloc/bloc/location_tracker_bloc.dart';
+import 'package:location_tracker/presentation/views/home/bloc/bloc/location%20bloc/location_tracker_bloc.dart';
+import 'package:location_tracker/presentation/views/home/bloc/bloc/profile%20bloc/bloc/user_profile_bloc.dart';
 import 'package:location_tracker/presentation/views/home/cubit/theme_cubit.dart';
 import 'package:location_tracker/presentation/views/home/screen_home.dart';
 
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => LoginBloc()),
         BlocProvider(create: (context) => AllUsersBloc()),
         BlocProvider(create: (context) => ThemeCubit()), 
+        BlocProvider(create: (context) => UserProfileBloc()), 
         BlocProvider(create: (context) => LocationTrackerBloc(locationService)), 
       ],
       child: BlocBuilder<ThemeCubit, ThemeData>(
