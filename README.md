@@ -1,16 +1,6 @@
-# location_tracker
+• Developed a user-friendly location tracker app with an intuitive UI, tracking users’ locations and
+allowing admins to view location details on Google Maps.
+• Utilized BLoC and Geolocator for clean, maintainable code and efficient location tracking.
+• Tracks user locations every 30 minutes and stores data in an SQLite database
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![WhatsApp Image 2024-07-19 at 10 16 28_cebfcf0a](https://github.com/user-attachments/assets/a621d590-445a-40e6-9fcf-bf3295d87f14)
